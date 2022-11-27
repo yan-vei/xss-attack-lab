@@ -1,5 +1,9 @@
 # XSS attacks lab  
   
+In this lab you will be introduced to the basics of executing reflected and stored XSS attacks on a vulnerable web application. You will write and execute JavaScript code to retrieve sensitive data and perform malicious actions in the client browser. Then you will learn how to protect your Flask application from such attacks and will modify the code according to the security standards.   
+  
+The lab setup was tested on Windows 11 machine, however, if you are using Linux or MacOS, the setup should work analogously.  
+    
 ## Setup  
   
 In order to complete the lab, make sure that you have installed: a web browser (such as Chrome or Firefox), Python and pip packet manager, Docker, and an IDE for editing JavaScript and Python code (e.g. you can use Notepad, VSCode, PyCharms, etc.).  
@@ -22,3 +26,5 @@ Option 2:
 1.4.	 After the image is built, run “docker container run -p 5000:5000 -dit –name xss-demo xss-demo:latest”  
 1.5.	 Once the container is running, navigate in the browser to localhost:5000 – you should be able to access the index page of the application.  
   
+## Completing the lab
+Refer to the lab_instructions file in the root directory of the project in order to complete the lab.
