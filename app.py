@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import db
+import secrets
 
 app = Flask(__name__)
 
@@ -13,6 +14,8 @@ def index():
 
     comments = db.get_comments(search_query)
 
+    token = secrets.token_hex(20)
+
     return render_template('index.html',
                            comments=comments,
-                           search_query=search_query)
+                           search_query=search_query, token=token)

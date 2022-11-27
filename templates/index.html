@@ -1,19 +1,33 @@
 <!DOCTYPE html>
-{% autoescape true %}
+{% autoescape false %}
 <html>
   <head>
     <meta charset="utf-8">
     <title>XSS Demo</title>
     <link rel="stylesheet" href="/static/style.css">
+    <script type="text/javascript">
+      localStorage.setItem("token", "{{token}}");
+    </script>
   </head>
 
   <body>
 
     <!-- Header -->
     <header>
-      <h1>XSS Demo</h1>
-      <p>Read, search and post comments</p>
+      <h1>XSS Attack Demonstration</h1>
+      <p>Read the article, comment on it and search comments!</p>
     </header>
+
+    <div>
+      <h3>The Guardian: "Thousands call for ‘climate reparations and justice’ in global protests"</h3>
+      <p> Thousands of young people have staged a coordinated “global climate strike” across Asia, Africa and Europe in a call for reparations for those worst affected by climate breakdown.
+          From New Zealand and Japan to Germany and the Democratic Republic of Congo, activists walked out of schools, universities and jobs to demand rich countries pay for the damage global heating is inflicting on the poor.
+          In the latest day of action by the Fridays For Future movement, strikes “for climate reparations and justice” were planned in about 450 locations worldwide.
+          The protests take place six weeks before the Cop27 climate summit, where developing countries plan to push for compensation for climate-related destruction to homes, infrastructure and livelihoods.
+          Recent months have seen deadly floods engulfing large parts of Pakistan, wildfires ravaging north Africa, Europe and North America, and record-breaking heatwaves in Britain and India.
+          “We’re striking all over the world because the governments in charge are still doing too little for climate justice,” said Darya Sotoodeh, a spokesperson for the group’s chapter in Germany.
+      </p>
+    </div>
 
     <!-- Search form -->
     <form method="GET">
